@@ -1,0 +1,29 @@
+<view class="xinsu_content">
+  <view class="aui-margin-t-10 pos-r">
+    <view id="index-sel" class="index-select-box">
+      <view bindtap="listStatusTap" data-id="0" class="index-select-item {{option==0?'active':''}}">默认排序</view>
+      <view bindtap="listStatusTap" data-id="1" class="index-select-item {{option==1?'active':''}}">点赞量</view>
+      <view bindtap="listStatusTap" data-id="2" class="index-select-item {{option==2?'active':''}}">浏览量</view>
+    </view>
+  </view>
+    <view class="aui-padded-l-10 bg-white">
+    <view id="picsBox" class="aui-row aui-font-size-12 aui-padded-t-15">
+      <block wx:for="{{enrollList}}" wx:key="key">
+        <view class="aui-col-xs-6 fl">
+          <view class="display-b bd-b aui-padded-b-10 aui-margin-b-10 pos-r">
+            <navigator url="../../pages/show/show?eid={{item.eid}}">
+              <image src="https://toupiao.xinsu360.net{{item.img}}"></image>
+              <view class="cl-666 aui-margin-t-5 text-hide-2">{{item.title}}</view>
+            </navigator>
+            <view class="pos-r aui-padded-t-5 aui-margin-t-5">
+              <span class="cl-2 aui-padded-t-5">{{item.hits}}票</span>
+              <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfoBind" class="index-vote bg-1">投票</button>
+              <button wx:else class="index-vote bg-1" bindtap="tiVoteBind" data-eid="{{item.eid}}">投票</button>
+            </view>
+            <view class="index-voteNum">{{item.eid}}号</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

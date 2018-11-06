@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/show/show",
+		"pages/user/info",
+		"pages/user/enroll"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小程序投票1.0",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#999999",
+    "selectedColor": "#00a0e9",
+    "borderStyle":"white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"img/home_hui.png",
+        "selectedIconPath":"img/home_lan.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "排行",
+        "iconPath": "img/pai_hui.png",
+        "selectedIconPath": "img/pai_lan.png"
+      },
+      {
+        "pagePath": "pages/user/info",
+        "text": "会员中心",
+        "iconPath": "img/hui_hui.png",
+        "selectedIconPath": "img/hui_lan.png"
+      }
+    ]
+  }
+}

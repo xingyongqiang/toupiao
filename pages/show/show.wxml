@@ -1,0 +1,16 @@
+<view class="xinsu_content">
+  <image src="https://toupiao.xinsu360.net{{content.img}}"></image>
+  <view class="detail">
+    <text class="title">{{content.title}}</text>
+  </view>
+  <view class="separate"></view>
+  <view class="xinsu-xiao-fen">
+    <view class="clearfix flex">
+      <text class="sub">票数：{{content.hits}}</text>
+      <text class="sub">浏览量：{{content.click}}</text>
+    </view>
+  </view>
+  <text class="text-remark">{{content.desc}}</text>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfoBind" class="xinsu-vote">投票</button>
+  <button wx:else class="xinsu-vote" bindtap="tiVoteBind" data-eid="{{content.eid}}">投票</button>
+</view>

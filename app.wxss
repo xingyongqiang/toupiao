@@ -1,0 +1,106 @@
+.xinsu_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fl {
+  float: left;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.aui-margin-t-10 {
+  margin-top: 28rpx !important;
+}
+
+.aui-padded-l-10 {
+  padding-left: 15rpx !important;
+}
+
+.aui-row {
+  overflow: hidden;
+  margin: 0;
+}
+
+.aui-font-size-12 {
+  font-size: 30rpx !important;
+}
+
+.aui-padded-t-15 {
+  padding-top: 24rpx !important;
+}
+
+.aui-col-xs-6 {
+  width: 50%;
+}
+
+.display-b {
+  display: block;
+}
+
+.bd-b image {
+  width: 360rpx;
+  height: 360rpx;
+}
+
+.aui-padded-b-10 {
+  padding-bottom: 18rpx !important;
+}
+
+.aui-margin-b-10 {
+  margin-bottom: 18rpx !important;
+}
+
+.cl-666 {
+  color: #666;
+}
+
+.aui-margin-t-0, .aui-margin-t-5 {
+  margin-top: 10rpx !important;
+}
+
+.text-hide-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.aui-padded-t-5 {
+  padding-top: 10rpx !important;
+}
+
+.cl-2 {
+  color: #00a0e9 !important;
+}
+
+.index-vote {
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+  height: 50rpx;
+  width: 120rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.bg-1 {
+  background-color: #00a0e9;
+}
+
+.index-voteNum {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 8rpx 20rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  background-color: rgba(255, 193, 7, 0.7);
+  color: #fff;
+  text-align: center;
+}

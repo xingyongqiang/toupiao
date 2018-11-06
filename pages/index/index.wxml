@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view class="xinsu_content">
+  <scroll-view class="container">
+    <view class="scrolltxt">
+        <view class="marquee_text">
+          <image src="../../img/laba.png"></image>
+          {{webSetting.sys_name}}
+        </view>
+    </view>
+  </scroll-view>
+  <swiper class="xinsu-banner" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{advList}}" wx:key="key">
+      <swiper-item>
+        <image src="https://toupiao.xinsu360.net{{item.img}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="pd-10 bg-1 aui-text-center aui-font-size-12 lh-18">
+    <view class="aui-row">
+      <view class="aui-col-xs-4 bd-r-1 fl">
+        <view class="text-white">已报名</view>
+        <view class="aui-font-size-14 cl-1">
+          <strong>{{webSetting.num}}</strong>
+        </view>
+      </view>
+      <view class="aui-col-xs-4 bd-r-1 fl">
+        <view class="text-white">累计投票</view>
+        <view class="aui-font-size-14 cl-1">
+          <strong>{{webSetting.hits}}</strong>
+        </view>
+      </view>
+      <view class="aui-col-xs-4 fl">
+        <view class="text-white">访问量</view>
+        <view class="aui-font-size-14 cl-1">
+          <strong>{{webSetting.click}}</strong>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="pd-10 aui-font-size-12 bg-2 aui-text-center">
+    <view class="text-white">活动倒计时</view>
+    <view class="aui-margin-t-10">
+      <div class="countItem aui-margin-r-10 cl-2">
+        <span>{{countDownDay.countDownDay}}</span>天</div>
+      <div class="countItem aui-margin-r-10">
+        <span>{{countDownDay.countDownHour}}</span>时</div>
+      <div class="countItem aui-margin-r-10">
+        <span>{{countDownDay.countDownMinute}}</span>分</div>
+      <div class="countItem">
+        <span>{{countDownDay.countDownSecond}}</span>秒</div>
+    </view>
+  </view>
+  <view class="aui-padded-l-10 bg-white">
+    <view id="picsBox" class="aui-row aui-font-size-12 aui-padded-t-15">
+      <block wx:for="{{enrollList}}" wx:key="key">
+        <view class="aui-col-xs-6 fl">
+          <view class="display-b bd-b aui-padded-b-10 aui-margin-b-10 pos-r">
+            <navigator url="../../pages/show/show?eid={{item.eid}}">
+              <image src="https://toupiao.xinsu360.net/{{item.img}}"></image>
+              <view class="cl-666 aui-margin-t-5 text-hide-2">{{item.title}}</view>
+            </navigator>
+            <view class="pos-r aui-padded-t-5 aui-margin-t-5">
+              <span class="cl-2 aui-padded-t-5">{{item.hits}}票</span>
+              <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfoBind" class="index-vote bg-1">投票</button>
+              <button wx:else class="index-vote bg-1" bindtap="tiVoteBind" data-eid="{{item.eid}}">投票</button>
+            </view>
+            <view class="index-voteNum">{{item.eid}}号</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

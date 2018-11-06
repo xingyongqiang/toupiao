@@ -1,0 +1,28 @@
+<view class="xinsu_content">
+	<view class="xinsu-title">
+		活动报名
+	</view>
+	<view>
+		<form bindsubmit="formSubmit" bindreset="formReset">
+			<view class="section">
+				<label class="xinsu-lable">标题</label>
+				<input name="title" type="text" placeholder="标题" />
+			</view>
+			<view class="section">
+				<label class="xinsu-lable">图片</label>
+				<view class="xinsu-up-img">
+					<button type="default" size="mini" bindtap="chooseImage">添加图片</button>
+					<image src="https://toupiao.xinsu360.net{{tempFilePaths}}"></image>
+					<input name="img" type="text" value="{{tempFilePaths}}" class="display-n" />
+				</view>
+			</view>
+			<view class="section">
+				<label class="xinsu-lable">描述</label>
+				<textarea name="textarea" placeholder="描述"></textarea>
+			</view>
+			<view class="btn-area">
+				<button formType="submit">活动报名</button>
+			</view>
+		</form>
+	</view>
+</view>
